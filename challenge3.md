@@ -8,14 +8,14 @@ You are free to use any stack (language/framework) you want (like React, Angular
 
 ## Requirements
 
-The application to be developed needs to meet the basic 4 requirements:
+The application to be developed needs to have the basic four features:
 
 - List issues using the Github API.
 - Sort issues either by id or state.
 - Favorite issues.
 - Navigate to a different screen that will have all the issues that were favorited.
 
-The design is up to you!
+Please note that the intent of any challenge is not to 'solve the problem', but showcase good practices while solving the problem.
 
 Feel free to take as much time as you want and send us the code when you feel comfortable with.
 
@@ -23,6 +23,7 @@ Feel free to take as much time as you want and send us the code when you feel co
 
 - You are free to use CSS pre-processors if you want to.
 - You can decide whether you want to manage state or not in the application.
+- The design is up to you!
 - Tests are always welcome.
 
 ## Resources
