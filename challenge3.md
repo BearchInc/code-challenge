@@ -1,26 +1,30 @@
 # Deepx's Front-end Challenge
 
 ## Description
-The challenge is to build a quick UI for listing and marking github issues as favorites.
+
+The challenge is to build a front-end application using HTML/CSS and any language/framework you want for listing and marking GitHub issues as favorites.
+
+You are free to use any stack (language/framework) you want (like React, Angular, Vue, Elm, etc) and we will also evaluate your knowledge about the technologies you selected for this challenge.
 
 ## Requirements
-There are 4 requirements:
-- The user must be able to list issues
-- The user must be able to sort either by id or state
-- The user must be able to favorite an issue.
-- The user must be able to navigate to another screen, this screen will have a favorite list where it will list all the companies that he favorites.
+
+The application to be developed needs to meet the basic 4 requirements:
+
+- List issues using the Github API.
+- Sort issues either by id or state.
+- Favorite issues.
+- Navigate to a different screen that will have all the issues that were favorited.
 
 The design is up to you!
 
-Please write the code as if it would go to production right after you commit it!
+Feel free to take as much time as you want and send us the code when you feel comfortable with.
 
-Feel free to take as much time as you want and send us the code when you feel conformable with it!
+## Tips
 
-## FAQ
+- You are free to use CSS pre-processors if you want to.
+- You can decide whether you want to manage state or not in the application.
+- Tests are always welcome.
 
-* Github has no API for making issues as favorites. How can I implement it?
+## Resources
 
-You are right. You are not supposed to use the API for favoriting an issue on Github. You are supposed to keep an in memory structure that may be destroyed when the application is closed.  
-
-## Resources:
-https://developer.github.com/v3/
+- [GitHub API Docs](https://developer.github.com/v3/)
