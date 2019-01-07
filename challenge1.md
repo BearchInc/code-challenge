@@ -1,4 +1,4 @@
-# Deepx's Mobile Challenge
+# DeepX Mobile Challenge
 
 ## Description
 

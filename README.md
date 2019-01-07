@@ -1,4 +1,4 @@
-# Deepx's Challenge
+# DeepX Challenge
 
 Hey! We want to take a look at your coding skills.
 

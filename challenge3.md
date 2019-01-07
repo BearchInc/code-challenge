@@ -1,4 +1,4 @@
-# Deepx's Front-end Challenge
+# DeepX Front-end Challenge
 
 ## Description
 
