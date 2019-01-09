@@ -22,7 +22,6 @@ Your problem solving skills, abilites with Git, the languages and frameworks sel
     - Cohesion
     - Coupling
 
-Everything you do will be evaluated.
 Keep in mind that each challenge is for a different development area (mobile, backend, frontend) and your knowledge on the stack, tools, frameworks and everything related to the specific area will also be evaluated.
 
 **Please do not forget to write a good README file with instructions to run and test your code :).**
