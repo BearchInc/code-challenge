@@ -33,6 +33,7 @@ Keep in mind that each challenge is for a different development area (mobile, ba
 - Take as much time as needed and **communicate as much as necessary**.
 - The challenges are not about something that 'solves the problem', but something that solves the problem while showcasing good practices and the best of your abilities.
 - Write the best code that you can, in the language you are most confortable with. Do not try a fancy language just to showcase how fast can you learn something.
+- You do not get bonus points for using Elixir or Elm if they are not languages you are comfortable with.
 
 ## Ready to start
 
