@@ -2,7 +2,7 @@
 
 ## Description
 
-The challenge is to build a front-end application using HTML/CSS and any language/framework you want for listing GitHub issues and marking them as favorites.
+The challenge is to build a front-end application using HTML/CSS and any language/framework you want to list GitHub issues and mark them as favorites.
 
 You are free to use any stack (language/framework) you want (like React, Angular, Vue, Elm, etc) and we will also evaluate your knowledge about the technologies you selected for this challenge.
 
@@ -21,8 +21,6 @@ Feel free to take as much time as you want and send us the code when you feel co
 
 ## Tips
 
-- You are free to use CSS pre-processors if you want to.
-- You can decide whether you want to manage state or not in the application.
 - The design is up to you!
 - Tests are always welcome.
 
