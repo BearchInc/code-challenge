@@ -15,7 +15,7 @@ The application to be developed needs to have the basic four features:
 - Favorite issues.
 - Navigate to a different screen that will have all the issues that were favorited.
 
-Please note that the intent of any challenge is not to 'solve the problem', but showcase good practices while solving the problem.
+Please note that the intent of any challenge is not __only__ to solve the problem, but showcase good programming practices while solving the problem.
 
 Feel free to take as much time as you want and send us the code when you feel comfortable with.
 
