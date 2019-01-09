@@ -2,7 +2,7 @@
 
 ## Description
 
-Develop a mobile application that consumes the github REST api and lists all the repositories for the `BearchInc` organization. The app consists of fetching, caching and displaying data. The app should work offline.
+Develop a mobile application that consumes the github REST api and lists all the repositories for the DeepX organization. The app consists of fetching, caching and displaying data. The app should work offline.
 
 ## Requirements
 
