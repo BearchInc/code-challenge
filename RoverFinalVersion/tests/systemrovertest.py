@@ -56,4 +56,80 @@ class Rover(SpaceShip):
 
 
 		directions = ['N', 'E', 'S', 'W'][self.initialDirection]
-		print(f'{self.positionRoverX} {self.positionRoverY} {directions}')
+		return f'{self.positionRoverX} {self.positionRoverY} {directions}'
+
+class RoverTest(unittest.TestCase):
+
+	def testMoveRover(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'N'])
+		self.assertEqual('1 3 N', rover.positionRover('LMLMLMLMM'))
+
+	def testRoverPosition(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'N'])
+
+		self.assertEqual(0, rover.initialDirection)
+		self.assertEqual(3, rover.leftRotateRover())
+		self.assertEqual(0, rover.rightRotateRover())
+		self.assertEqual(1, rover.rightRotateRover())
+		self.assertEqual(2, rover.rightRotateRover())
+
+	def testMoveRoverFront(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'N'])
+
+	def testLocationPositionNorth(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'N'])
+		rover.positionRover("LMLMLMLMM")
+
+		rover.moveRover()
+		self.assertEqual(1, rover.positionRoverX)
+		self.assertEqual(4, rover.positionRoverY)
+
+		rover.moveRover()
+		self.assertEqual(1, rover.positionRoverX)
+		self.assertEqual(5, rover.positionRoverY)
+
+	def testLocationPositionSouth(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'S'])
+		rover.positionRover("MM")
+
+		rover.moveRover()
+		self.assertEqual(1, rover.positionRoverX)
+		self.assertEqual(-1, rover.positionRoverY)
+
+		rover.moveRover()
+		self.assertEqual(1, rover.positionRoverX)
+		self.assertEqual(-2, rover.positionRoverY)
+
+	def testLocationPositionEast(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'E'])
+		rover.positionRover("MM")
+
+		rover.moveRover()
+		self.assertEqual(4, rover.positionRoverX)
+		self.assertEqual(2, rover.positionRoverY)
+
+		rover.moveRover()
+		self.assertEqual(5, rover.positionRoverX)
+		self.assertEqual(2, rover.positionRoverY)		
+
+	def testLocationPositionOest(self):
+		rover = Rover(5, 5)
+		rover.getRoverCleanLocalization([1, 2, 'W'])
+		rover.positionRover("MM")
+		
+		rover.moveRover()
+		self.assertEqual(-2, rover.positionRoverX)
+		self.assertEqual(2, rover.positionRoverY)
+
+		rover.moveRover()
+		self.assertEqual(-3, rover.positionRoverX)
+		self.assertEqual(2, rover.positionRoverY)			
+
+if __name__ == '__main__':
+	unittest.main()

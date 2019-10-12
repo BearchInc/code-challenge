@@ -25,9 +25,5 @@ class SpaceShipTest(unittest.TestCase):
 		plateauOne.confirmPlateauSize()
 		plateauOne.sendRovers()
 
-		plateauTwo = SpaceShip.getPlateauSize()
-		plateauTwo.confirmPlateauSize()
-		plateauTwo.sendRovers()
-
 if __name__ == '__main__':
 	unittest.main()

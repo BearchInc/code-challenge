@@ -1,38 +1,39 @@
 from systemrovertest import Rover
-from loadcommandstest import FileLoad
+from loadcommandstest import Commands
 import unittest
 
 def main():
 
-	commandsRover = FileLoad.loadFile('rovercommands.input')
+	sendsendCommandsRover = Commands.loadInstructions('rovercommands.input')
 	
-	roverOne = Rover(commandsRover[0])
-	roverOne.getRoverCleanLocalization(commandsRover[1].split())
-	roverOne.positionRover(commandsRover[2])
+	roverOne = Rover(sendCommandsRover[0])
+	roverOne.getRoverCleanLocalization(sendCommandsRover[1].split())
+	roverOne.positionRover(sendCommandsRover[2])
 	
 	roverTwo = Rover()
-	roverTwo.getRoverCleanLocalization(commandsRover[3].split())
-	roverTwo.positionRover(commandsRover[4])
+	roverTwo.getRoverCleanLocalization(sendCommandsRover[3].split())
+	roverTwo.positionRover(sendCommandsRover[4])
 
 class MainTest(unittest.TestCase):
 
 	def testMain(self):
-		commandsRover = FileLoad.loadFile('rovercommands.input')
+		sendCommandsRover = Commands.loadInstructions('rovercommands.input')
+		self.assertEqual(['5 5', '1 2 N', 'LMLMLMLMM', '3 3 E', 'MMRMMRMRRM'], sendCommandsRover)
 
-		roverOne = Rover(commandsRover[0])
-		roverOne.getRoverCleanLocalization(commandsRover[1].split())
-		roverOne.positionRover(commandsRover[2])
+		roverOne = Rover(sendCommandsRover[0])
+		roverOne.getRoverCleanLocalization(sendCommandsRover[1].split())
+		roverOne.positionRover(sendCommandsRover[2])
 
-		self.assertEqual('5 5', commandsRover[0])
-		self.assertEqual('1 2 N'.split(), commandsRover[1].split())
-		self.assertEqual('LMLMLMLMM', commandsRover[2])
+		self.assertEqual('5 5', sendCommandsRover[0])
+		self.assertEqual('1 2 N'.split(), sendCommandsRover[1].split())
+		self.assertEqual('LMLMLMLMM', sendCommandsRover[2])
 
 		roverTwo = Rover()
-		roverTwo.getRoverCleanLocalization(commandsRover[3].split())
-		roverTwo.positionRover(commandsRover[4])
+		roverTwo.getRoverCleanLocalization(sendCommandsRover[3].split())
+		roverTwo.positionRover(sendCommandsRover[4])
 
-		self.assertEqual('3 3 E'.split(), commandsRover[3].split())
-		self.assertEqual('MMRMMRMRRM', commandsRover[4])
+		self.assertEqual('3 3 E'.split(), sendCommandsRover[3].split())
+		self.assertEqual('MMRMMRMRRM', sendCommandsRover[4])
 
 
 if __name__ == '__main__':

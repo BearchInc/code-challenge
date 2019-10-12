@@ -2,10 +2,10 @@ from systemrovertest import Rover
 
 import unittest
 
-class FileLoad:
+class Commands:
 
 	@classmethod	
-	def loadFile(self, nameFile):
+	def loadInstructions(self, nameFile):
 
 		with open(nameFile) as command:
 			arrayForCommands =[]
@@ -13,10 +13,11 @@ class FileLoad:
 				arrayForCommands.append(line.rstrip('\n').rstrip())
 			return(arrayForCommands)
 
-class FileLoadTest(unittest.TestCase):
+class CommandsTest(unittest.TestCase):
 
-	def testLoadFile(self):
-		commandsRover = FileLoad.loadFile('rovercommands.input')
+	def testloadInstructions(self):
+		commandsRover = Commands.loadInstructions('rovercommands.input')
+		self.assertEqual(['5 5', '1 2 N', 'LMLMLMLMM', '3 3 E', 'MMRMMRMRRM'], commandsRover)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 from systemrover import Rover
-from loadcommands import FileLoad
+from loadcommands import Commands
 
 """
 Load file with input, and start rovers
@@ -7,15 +7,15 @@ Load file with input, and start rovers
 
 def main():
 
-	commandsRover = FileLoad.loadFile('rovercommands.input')
+	sendCommandsRover = Commands.loadInstructions('rovercommands.input')
 	
-	roverOne = Rover(commandsRover[0])
-	roverOne.getRoverCleanLocalization(commandsRover[1].split())
-	roverOne.positionRover(commandsRover[2])
+	roverOne = Rover(sendCommandsRover[0])
+	roverOne.getRoverCleanLocalization(sendCommandsRover[1].split())
+	roverOne.positionRover(sendCommandsRover[2])
 	
 	roverTwo = Rover()
-	roverTwo.getRoverCleanLocalization(commandsRover[3].split())
-	roverTwo.positionRover(commandsRover[4])
+	roverTwo.getRoverCleanLocalization(sendCommandsRover[3].split())
+	roverTwo.positionRover(sendCommandsRover[4])
 
 if __name__ == '__main__':
 	main()

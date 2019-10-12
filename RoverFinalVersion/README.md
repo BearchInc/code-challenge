@@ -11,13 +11,12 @@ The command above, load the commands from 'rovercommands.input'
 
 
 ### Check tests
-to run, enter in /tests/, all files are tested, test-rover-generic an test-rover-construct, are the same but using construct and generic method for test.
+to run, enter in /tests/, all files are tested
 ```
-python test-rover-construct.py
+python systemrovertest.py
 python sendrovertest.py
 ```
 
 ### Contribute
 Please send me an feedback.
-
 

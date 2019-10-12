@@ -2,10 +2,10 @@
 This class load files with commands and split
 """
 
-class FileLoad:
+class Commands:
 
 	@classmethod	
-	def loadFile(self, nameFile):
+	def loadInstructions(self, nameFile):
 
 		with open(nameFile) as command:
 			arrayForCommands =[]
