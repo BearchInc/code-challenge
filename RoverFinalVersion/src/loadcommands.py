@@ -2,7 +2,7 @@
 This class load files with commands and split
 """
 
-class Commands:
+class Command:
 
 	@classmethod	
 	def loadInstructions(self, nameFile):

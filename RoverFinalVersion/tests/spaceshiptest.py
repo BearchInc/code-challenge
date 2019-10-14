@@ -4,13 +4,13 @@ import unittest
 class SpaceShip:
 
 	def __init__(self, sizePlateauX, sizePlateauY):
-		self.sizePlateauX = int(sizePlateauX)
-		self.sizePlateauY = int(sizePlateauY)
+		self.__sizePlateauX = int(sizePlateauX)
+		self.__sizePlateauY = int(sizePlateauY)
 	
 	@classmethod
 	def getPlateauSize(self):
-		sizePlateauX, sizePlateauY = input().split()
-		return self(sizePlateauX, sizePlateauY)
+		__sizePlateauX, __sizePlateauY = input().split()
+		return self(__sizePlateauX, __sizePlateauY)
 
 	def confirmPlateauSize(self):
 		print('Plateau size confirmed!')

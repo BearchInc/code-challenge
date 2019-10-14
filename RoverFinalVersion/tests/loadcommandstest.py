@@ -2,7 +2,7 @@ from systemrovertest import Rover
 
 import unittest
 
-class Commands:
+class Command:
 
 	@classmethod	
 	def loadInstructions(self, nameFile):
@@ -13,7 +13,7 @@ class Commands:
 				arrayForCommands.append(line.rstrip('\n').rstrip())
 			return(arrayForCommands)
 
-class CommandsTest(unittest.TestCase):
+class CommandTest(unittest.TestCase):
 
 	def testloadInstructions(self):
 		commandsRover = Commands.loadInstructions('rovercommands.input')
