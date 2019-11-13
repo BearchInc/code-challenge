@@ -1,11 +1,10 @@
 from systemrover import Rover
 from loadcommands import Command
 
-"""
-Load file with input, and start rovers
-"""
-
 def main():
+	"""
+	Main function of Rovers when running from command line.
+	"""
 
 	sendCommandsRover = Command.loadInstructions('rovercommands.input')
 	

@@ -1,11 +1,13 @@
-"""
-This class load files with commands and split
-"""
-
 class Command:
+	"""
+	Load file with commands and split.
+	"""
 
 	@classmethod	
 	def loadInstructions(self, nameFile):
+		"""
+		Extended method from class Command, directly load.
+		"""
 
 		with open(nameFile) as command:
 			arrayForCommands =[]

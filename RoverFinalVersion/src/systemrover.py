@@ -1,18 +1,23 @@
 #!/usr/bin/python
 
-"""
-The Rover System
-"""
-
 from spaceship import SpaceShip
 
 class Rover(SpaceShip):
+	"""
+	Complete Rover System, CleanCodeBook model used, methods called in cascade.
+	"""
 
 	def __init__(self, sizePlateauX = 5, sizePlateauY = 5):
+		"""
+		Seting Plateau position from the vision of SpaceShip.
+		"""
 		pass
 
 	@classmethod
 	def setRoverCleanLocalization(self, roverCommand):
+		"""
+		Extended method from class, initializate rover and send commands.
+		"""
 		self.__directions = ['N', 'E', 'S', 'W']
 		self.__positionRoverX = int(roverCommand[0])
 		self.__positionRoverY = int(roverCommand[1])
@@ -22,6 +27,9 @@ class Rover(SpaceShip):
 		return self.__initialDirection
 	
 	def setPositionRover(self, commands):
+		"""
+		Rover commands'll be read and call another function like on the book CleanCode(cascade).
+		"""
 		for command in commands:
 			if command == 'R':
 				self.__rightRotateRover()
@@ -31,6 +39,9 @@ class Rover(SpaceShip):
 				self.__moveRover()
 
 		self.__getHeadingRover()
+
+	def __getHeadingRover(self):
+		print(f'{self.__positionRoverX} {self.__positionRoverY} {self.__directions[int(self.__initialHeading())]}')
 
 	def __moveRover(self):
 		if(self.__checkNorth()):
@@ -64,6 +75,3 @@ class Rover(SpaceShip):
 
 	def __leftRotateRover(self):
 		self.__initialDirection = 3 if self.__initialHeading() == 0 else self.__initialHeading() - 1
-
-	def __getHeadingRover(self):
-		print(f'{self.__positionRoverX} {self.__positionRoverY} {self.__directions[int(self.__initialHeading())]}')

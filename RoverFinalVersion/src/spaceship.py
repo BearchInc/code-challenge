@@ -1,10 +1,7 @@
-import sys
-
-"""
-This class it's like the spaceShip, sending both rovers to Plateau
-"""
-
 class SpaceShip:
+	"""
+	SpaceShip who have vision from plateau.
+	"""
 
 	def __init__(self, sizePlateauX, sizePlateauY):
 		self.__sizePlateauX = int(sizePlateauX)
@@ -12,11 +9,8 @@ class SpaceShip:
 	
 	@classmethod
 	def setPlateauSize(self):
+		"""
+		Extended method from class SpaceShip setting
+		"""
 		__sizePlateauX, __sizePlateauY = input().split()
 		return self(__sizePlateauX, __sizePlateauY)
-
-	def confirmPlateauSize(self):
-		print('Plateau size confirmed!')
-
-	def sendRovers(self):
-		print('Rovers sended!')
